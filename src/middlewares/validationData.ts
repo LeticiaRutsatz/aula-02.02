@@ -8,7 +8,6 @@ export const validationData = (request: Request, response: Response, next: NextF
     if (!name || !newCPF || !email || !age) {
         return response.status(400).json({ message: 'Invalid format, bro' });
     }
-
-
+    
      return next()
 }

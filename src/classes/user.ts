@@ -1,4 +1,4 @@
-import { Transaction } from "./transaction";
+import { Transaction, TransactionDTO } from "./transaction";
 import { v4 as uuid} from 'uuid';
 
 
@@ -60,6 +60,10 @@ export class User {
 
   get transactions () {
     return this._transactions;
+  }
+
+  set transactions (transaction : Transaction[] | undefined) {
+    this._transactions = transaction;
   }
 
   get id () {
